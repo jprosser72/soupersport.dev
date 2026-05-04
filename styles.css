@@ -3,8 +3,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #0f0f11;
-  color: #e8e8ea;
+  background-color: #ffffff;
+  color: #0b2540; /* deep dark blue */
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
@@ -33,12 +33,13 @@ h1 {
   margin: 0;
   font-size: 2.4rem;
   font-weight: 600;
+  color: #0b2540;
 }
 
 .tagline {
   margin-top: 0.5rem;
   font-size: 1.05rem;
-  color: #b5b5bb;
+  color: #3b4f66; /* muted blue-gray */
 }
 
 /* Sections */
@@ -51,6 +52,7 @@ h2 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #0b2540;
 }
 
 /* Status */
@@ -58,7 +60,7 @@ h2 {
 .status {
   text-align: center;
   font-size: 0.95rem;
-  color: #cfcfd4;
+  color: #2e4057;
 }
 
 /* Text */
@@ -82,7 +84,7 @@ h2 {
 /* Links */
 
 a {
-  color: #8ab4f8;
+  color: #1f5fa3; /* strong but not bright */
   text-decoration: none;
 }
 
@@ -100,14 +102,14 @@ a:hover {
 
 .note {
   font-size: 0.9rem;
-  color: #a8a8ae;
+  color: #4a5f73;
 }
 
 /* Footer */
 
 .footer {
-  border-top: 1px solid #2a2a2e;
+  border-top: 1px solid #d8e0e8;
   padding-top: 1.5rem;
   font-size: 0.85rem;
-  color: #a0a0a6;
+  color: #5c6f82;
 }
