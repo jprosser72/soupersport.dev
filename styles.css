@@ -1,19 +1,18 @@
 /* =========================================================
-   SouperSport — Logo‑Anchored Color System
-   Derived from official logo
+   SouperSport — Logo‑Anchored Design System
    ========================================================= */
 
 :root {
-  /* Logo primary colors */
+  /* Logo‑derived colors */
   --ss-brown-primary:    #4b2615;  /* deep chocolate brown (logo text + car) */
-  --ss-brown-secondary:  #7a3f1c;  /* lighter brown accent */
+  --ss-brown-secondary:  #7a3f1c;
 
   --ss-orange-primary:   #f7931c;  /* sunset orange */
-  --ss-orange-secondary: #ffb347;  /* golden amber highlight */
+  --ss-orange-secondary: #ffb347;  /* golden amber */
 
   /* Neutrals */
   --ss-bg:               #ffffff;
-  --ss-cream:            #fff2e0;  /* logo highlight cream */
+  --ss-cream:            #fff2e0;
 
   /* Text roles */
   --ss-text-main:        var(--ss-brown-primary);
@@ -35,6 +34,8 @@ html, body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.002em;
 }
 
 .container {
@@ -60,14 +61,17 @@ html, body {
 
 h1 {
   margin: 0;
-  font-size: 2.4rem;
-  font-weight: 600;
+  font-size: 2.45rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
   color: var(--ss-brown-primary);
 }
 
 .tagline {
   margin-top: 0.5rem;
   font-size: 1.05rem;
+  font-weight: 450;
+  letter-spacing: 0.01em;
   color: var(--ss-text-muted);
 }
 
@@ -82,6 +86,7 @@ section {
 h2 {
   font-size: 1.4rem;
   font-weight: 600;
+  letter-spacing: -0.005em;
   margin-bottom: 1rem;
   color: var(--ss-brown-primary);
 }
@@ -116,6 +121,26 @@ h2 {
 
 .principles li {
   margin-bottom: 0.75rem;
+}
+
+/* =========================================================
+   Sunset divider — logo arc echo, rhythm aligned
+   ========================================================= */
+
+.sunset-divider {
+  width: 100%;
+  height: 6px;
+  margin: 2.25rem 0 2.75rem 0;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--ss-orange-secondary),
+    var(--ss-orange-primary),
+    var(--ss-orange-secondary),
+    transparent
+  );
 }
 
 /* =========================================================
@@ -156,4 +181,63 @@ a:hover {
   padding-top: 1.5rem;
   font-size: 0.85rem;
   color: #7a5a44;
+}
+
+/* =========================================================
+   Print fallback (remove decorative elements)
+   ========================================================= */
+
+@media print {
+  .sunset-divider {
+    display: none;
+  }
+
+  body {
+    color: #000000;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: underline;
+  }
+}
+
+/* =========================================================
+   Dark mode (respects logo palette)
+   Activated when browser/system prefers dark mode
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ss-bg:           #1a0f09;  /* deep warm brown, not black */
+    --ss-text-main:    #f5e6d8;
+    --ss-text-muted:   #d0b4a1;
+    --ss-border-light: #3a2417;
+  }
+
+  body {
+    background-color: var(--ss-bg);
+    color: var(--ss-text-main);
+  }
+
+  h1, h2 {
+    color: #ffe5c4;
+  }
+
+  .status {
+    color: var(--ss-orange-secondary);
+  }
+
+  a {
+    color: var(--ss-orange-primary);
+  }
+
+  a:hover {
+    color: #ffd08a;
+  }
+
+  .footer {
+    border-top-color: var(--ss-border-light);
+    color: #c9a891;
+  }
 }
