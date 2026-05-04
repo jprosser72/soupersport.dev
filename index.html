@@ -2,24 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SouperSport</title>
 
-  <!-- Basic responsive behavior -->
+  <title>SouperSport — Deterministic Execution Semantics</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="SouperSport is a research-driven programming language focused on explicit execution semantics, deterministic state, and verifiable computation.">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <main>
-    <img
-      src="assets/logo.png"
-      alt="SouperSport logo"
-      class="logo"
-    >
 
-    <h2>Where do you wanna roll today?</h2>
-    <p>A programming language in design.</p>
+<body>
+  <main class="container">
+
+    <!-- Header / Identity -->
+    <header class="header">
+      <img src="assets/logo.png" alt="SouperSport logo" class="logo">
+      <h1>SouperSport</h1>
+      <p class="tagline">
+        Explicit, deterministic execution semantics.
+      </p>
+    </header>
+
+    <!-- Release Status -->
+    <section class="status">
+      <p>
+        <strong>Status:</strong> SouperSport <strong>V1</strong> released
+      </p>
+    </section>
+
+    <!-- Overview -->
+    <section class="intro">
+      <p>
+        SouperSport is a research‑driven programming language focused on
+        predictable execution, explicit state transitions, and
+        verifiable computation.
+      </p>
+
+      <p>
+        The project emphasizes semantic correctness and long‑term
+        interpretability over convenience, implicit behavior,
+        or best‑effort execution.
+      </p>
+    </section>
+
+    <!-- Design Principles -->
+    <section class="principles">
+      <h2>Design Principles</h2>
+      <ul>
+        <li>
+          <strong>Explicitness over inference</strong> —
+          execution behavior is declared, not guessed.
+        </li>
+        <li>
+          <strong>Determinism as a semantic property</strong> —
+          identical inputs and state produce identical results and traces.
+        </li>
+        <li>
+          <strong>Refusal over ambiguity</strong> —
+          illegal or underspecified programs are rejected, not approximated.
+        </li>
+        <li>
+          <strong>Traceability as meaning</strong> —
+          execution traces are first‑class semantic artifacts.
+        </li>
+        <li>
+          <strong>Deliberate scope</strong> —
+          SouperSport does not attempt to model all forms of computation.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Canonical Source -->
+    <section class="canonical">
+      <h2>Canonical Source of Truth</h2>
+
+      <p>
+        This website provides an overview and entry point.
+        The authoritative specifications, design history, and releases
+        live in the canonical GitHub repository:
+      </p>
+
+      <p class="repo-link">
+        <a href="https://github.com/SouperSport/soupersport"
+           target="_blank"
+           rel="noopener">
+          https://github.com/SouperSport/soupersport
+        </a>
+      </p>
+
+      <p class="note">
+        All normative definitions and semantic guarantees originate there.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        SouperSport is intentionally strict and intentionally limited.
+      </p>
+      <p>
+        © SouperSport Project
+      </p>
+    </footer>
+
   </main>
 </body>
 </html>
