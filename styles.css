@@ -1,10 +1,37 @@
-/* Base layout */
+/* =========================================================
+   SouperSport — Logo‑Anchored Color System
+   Derived from official logo
+   ========================================================= */
+
+:root {
+  /* Logo primary colors */
+  --ss-brown-primary:    #4b2615;  /* deep chocolate brown (logo text + car) */
+  --ss-brown-secondary:  #7a3f1c;  /* lighter brown accent */
+
+  --ss-orange-primary:   #f7931c;  /* sunset orange */
+  --ss-orange-secondary: #ffb347;  /* golden amber highlight */
+
+  /* Neutrals */
+  --ss-bg:               #ffffff;
+  --ss-cream:            #fff2e0;  /* logo highlight cream */
+
+  /* Text roles */
+  --ss-text-main:        var(--ss-brown-primary);
+  --ss-text-muted:       #6b4a35;
+
+  /* UI */
+  --ss-border-light:     #e6d4c5;
+}
+
+/* =========================================================
+   Base layout
+   ========================================================= */
 
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #0b2540; /* deep dark blue */
+  background-color: var(--ss-bg);
+  color: var(--ss-text-main);
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
@@ -16,7 +43,9 @@ html, body {
   padding: 3rem 1.5rem;
 }
 
-/* Header */
+/* =========================================================
+   Header
+   ========================================================= */
 
 .header {
   text-align: center;
@@ -33,16 +62,18 @@ h1 {
   margin: 0;
   font-size: 2.4rem;
   font-weight: 600;
-  color: #0b2540;
+  color: var(--ss-brown-primary);
 }
 
 .tagline {
   margin-top: 0.5rem;
   font-size: 1.05rem;
-  color: #3b4f66; /* muted blue-gray */
+  color: var(--ss-text-muted);
 }
 
-/* Sections */
+/* =========================================================
+   Sections
+   ========================================================= */
 
 section {
   margin-bottom: 2.5rem;
@@ -52,18 +83,22 @@ h2 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #0b2540;
+  color: var(--ss-brown-primary);
 }
 
-/* Status */
+/* =========================================================
+   Status
+   ========================================================= */
 
 .status {
   text-align: center;
   font-size: 0.95rem;
-  color: #2e4057;
+  color: var(--ss-orange-primary);
 }
 
-/* Text */
+/* =========================================================
+   Content
+   ========================================================= */
 
 .intro p,
 .canonical p,
@@ -71,7 +106,9 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Design principles */
+/* =========================================================
+   Design principles
+   ========================================================= */
 
 .principles ul {
   padding-left: 1.2rem;
@@ -81,14 +118,17 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-/* Links */
+/* =========================================================
+   Links
+   ========================================================= */
 
 a {
-  color: #1f5fa3; /* strong but not bright */
+  color: var(--ss-orange-primary);
   text-decoration: none;
 }
 
 a:hover {
+  color: var(--ss-orange-secondary);
   text-decoration: underline;
 }
 
@@ -98,18 +138,22 @@ a:hover {
   margin: 1.25rem 0;
 }
 
-/* Subtle notes */
+/* =========================================================
+   Notes
+   ========================================================= */
 
 .note {
   font-size: 0.9rem;
-  color: #4a5f73;
+  color: var(--ss-text-muted);
 }
 
-/* Footer */
+/* =========================================================
+   Footer
+   ========================================================= */
 
 .footer {
-  border-top: 1px solid #d8e0e8;
+  border-top: 1px solid var(--ss-border-light);
   padding-top: 1.5rem;
   font-size: 0.85rem;
-  color: #5c6f82;
+  color: #7a5a44;
 }
